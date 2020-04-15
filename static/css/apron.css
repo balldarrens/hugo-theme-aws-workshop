@@ -314,7 +314,7 @@ html {
 }
 .remark-slide-content .remark-slide-number,
 .remark-slide-content .footer li {
-  font-size: 1.25rem;
+  font-size: small;
   display: block;
   list-style: none;
   position: absolute;
@@ -323,7 +323,7 @@ html {
   margin: 0px;
   padding: 2px 5px;
   border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: none
 }
 .remark-slide-content .footer,
 .remark-slide-content .footer ul {

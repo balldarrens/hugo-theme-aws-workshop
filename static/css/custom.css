@@ -1,0 +1,235 @@
+@font-face {
+    font-family: "Amazon Ember Condensed";
+    src: url(../fonts/amazon_ember/AmazonEmberCd_Bd.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember Condensed";
+    src: url(../fonts/amazon_ember/AmazonEmberCd_BdIt.ttf) format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember Condensed";
+    src: url(../fonts/amazon_ember/AmazonEmberCd_Lt.ttf) format('truetype');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember Condensed";
+    src: url(../fonts/amazon_ember/AmazonEmberCd_LtIt.ttf) format('truetype');
+    font-weight: light;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember Condensed";
+    src: url(../fonts/amazon_ember/AmazonEmberCd_Rg.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember Condensed";
+    src: url(../fonts/amazon_ember/AmazonEmberCd_RgIt.ttf) format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember Condensed";
+    src: url(../fonts/amazon_ember/AmazonEmberCd_Th.ttf) format('truetype');
+    font-weight: thin;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember Condensed";
+    src: url(../fonts/amazon_ember/AmazonEmberCd_ThIt.ttf) format('truetype');
+    font-weight: thin;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember Display";
+    src: url(../fonts/amazon_ember/AmazonEmberDisplay_Bd.ttf) format('truetype');
+    font-weight: normal;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Amazon Ember Display";
+    src: url(../fonts/amazon_ember/AmazonEmberDisplay_He.ttf) format('truetype');
+    font-weight: heavy;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember Display";
+    src: url(../fonts/amazon_ember/AmazonEmberDisplay_Lt.ttf) format('truetype');
+    font-weight: light;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Amazon Ember Display";
+    src: url(../fonts/amazon_ember/AmazonEmberDisplay_Md.ttf) format('truetype');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember Display";
+    src: url(../fonts/amazon_ember/AmazonEmberDisplay_Rg.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember Duospace";
+    src: url(../fonts/amazon_ember/AmazonEmberDuospace_Bd.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Amazon Ember Duospace";
+    src: url(../fonts/amazon_ember/AmazonEmberDuospace_Rg.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}       
+
+@font-face {
+    font-family: "Amazon Ember Mono";
+    src: url(../fonts/amazon_ember/AmazonEmberMono_Bd.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember Mono";
+    src: url(../fonts/amazon_ember/AmazonEmberMono_Rg.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_Bd.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_BdIt.ttf) format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_He.ttf) format('truetype');
+    font-weight: heavy;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_HeIt.ttf) format('truetype');
+    font-weight: heavy;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_Lt.ttf) format('truetype');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_LtIt.ttf) format('truetype');
+    font-weight: light;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_Md.ttf) format('truetype');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_MdIt.ttf) format('truetype');
+    font-weight: medium;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_Rg.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_RgIt.ttf) format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_Th.ttf) format('truetype');
+    font-weight: thin;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amazon Ember";
+    src: url(../fonts/amazon_ember/AmazonEmber_ThIt.ttf) format('truetype');
+    font-weight: thin;
+    font-style: italic;
+}
+
+
+body {
+    font-family: "Amazon Ember", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+}
+
+.remark-slide-content {
+    font-family: "Amazon Ember", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+  }
+  .remark-slide-content pre,
+  .remark-slide-content code,
+  .remark-slide-content kbd,
+  .remark-slide-content tt,
+  .remark-slide-content samp {
+    font-family: "Amazon Ember", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+  }
+  .remark-slide-content h1,
+  .remark-slide-content h2,
+  .remark-slide-content h3 {
+    font-family: "Amazon Ember", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: white;
+  }
