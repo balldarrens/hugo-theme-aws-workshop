@@ -1,7 +1,8 @@
----
-title : Children
-description : List the child pages of a page
----
++++
+title = "Children"
+description = "List the child pages of a page"
+weight = 33
++++
 
 Use the children shortcode to list the child pages of a page and the further descendants (children's children). By default, the shortcode displays links to the child pages.
 
@@ -18,28 +19,14 @@ Use the children shortcode to list the child pages of a page and the further des
 
 ## Demo
 
-	{{%/* children  */%}}
-
-{{% children %}}
-
-	{{%/* children description="true" */%}}
-
-{{%children description="true" %}}
-
-	{{%/* children depth="3" showhidden="true" */%}}
+	{{%/* children description="true" depth="3" showhidden="true" */%}}
 
 {{% children depth="3" showhidden="true" %}}
 
-	{{%/* children style="h2" depth="3" description="true" */%}}
+	{{%/* children style="h2" depth="3" description="true" showhidden="true" */%}}
 
-{{% children style="h2" depth="3" description="true" %}}
+{{% children style="h2" depth="3" description="true" showhidden="true" %}}
 
-	{{%/* children style="div" depth="999" */%}}
+	{{%/* children style="div" depth="999" showhidden="true" */%}}
 
-{{% children style="div" depth="999" %}}
-
-
-
-
-
-
+{{% children style="div" depth="999" showhidden="true" %}}

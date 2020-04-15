@@ -1,72 +1,63 @@
----
-title: Installation
-weight: 15
----
-
-The following steps are here to help you initialize your new website. If you don't know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/overview/quickstart/).
++++
+title = "Installation"
+weight = 12
++++
+The following steps are here to help you initialize your new workshop. If you don't know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/overview/quickstart/).
 
 ## Create your project
 
-Hugo provides a `new` command to create a new website.
+If you haven't already, make a copy of this entire directory and rename it something descriptive, similar to the title of your workshop.
 
+```bash
+cp -R Aws-workshop-template/ my-first-worshop/
 ```
-hugo new site <new_project>
-```
 
-## Install the theme
+## What's Included
 
-Install the **Hugo-theme-learn** theme by following [this documentation](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)
+This project the following folders:
 
-This theme's repository is: https://github.com/matcornic/hugo-theme-learn.git
+* `deck`: The location to store your presentation materials, if not already stored centrally in a system like KnowledgeMine or Wisdom.
+* `resources`: Store any example code, IAM policies, or Cloudformation templates needed by your workshop here.
+* `workshop`: This is the core workshop folder. This is generated as HTML and hosted for presentation for customers.
 
-Alternatively, you can [download the theme as .zip](https://github.com/matcornic/hugo-theme-learn/archive/master.zip) file and extract it in the `themes` directory
 
-## Basic configuration
+## Navigate to the `workshop` directory
 
-When building the website, you can set a theme by using `--theme` option. However, we suggest you modify the configuration file (`config.toml`) and set the theme as the default. You can also add the `[outputs]` section to enable the search functionality.
+All command line directions in this documentation assume you are in the `workshop` directory. Navigate there now, if you aren't there already.
 
-```toml
-# Change the default theme to be use when building the site with Hugo
-theme = "hugo-theme-learn"
-
-# For search functionality
-[outputs]
-home = [ "HTML", "RSS", "JSON"]
+```bash
+cd my-first-workshop/workshop
 ```
 
 ## Create your first chapter page
 
-Chapters are pages that contain other child pages. It has a special layout style and usually just contains a _chapter name_, the _title_ and a _brief abstract_ of the section.
+Chapters are pages that contain other child pages. It has a special layout style and usually just contains a _brief abstract_ of the section.
 
-```
-### Chapter 1
-
-# Basics
-
-Discover what this Hugo theme is all about and the core concepts behind it.
+```markdown
+Discover what this template is all about and the core concepts behind it.
 ```
 
 renders as 
 
-![A Chapter](/en/basics/installation/images/chapter.png?classes=shadow&width=60pc)
+{{< img "chapter.en.png" "A Chapter" >}}
 
-**Hugo-theme-learn** provides archetypes to create skeletons for your website. Begin by creating your first chapter page with the following command
+This template provides archetypes to create skeletons for your workshop. Begin by creating your first chapter page with the following command
 
-```
-hugo new --kind chapter basics/_index.md
+```bash
+hugo new --kind chapter intro/_index.md
 ```
 
 By opening the given file, you should see the property `chapter=true` on top, meaning this page is a _chapter_.
 
-By default all chapters and pages are created as a draft. If you want to render these pages, remove the property `draft: true` from the metadata.
+By default all chapters and pages are created as a draft. If you want to render these pages, remove the property `draft: true` from the front matter section.
 
 ## Create your first content pages
 
 Then, create content pages inside the previously created chapter. Here are two ways to create content in the chapter:
 
-```
-hugo new basics/first-content.md
-hugo new basics/second-content/_index.md
+```bash
+hugo new intro/first-content.md
+hugo new intro/second-content/_index.md
 ```
 
 Feel free to edit thoses files by adding some sample content and replacing the `title` value in the beginning of the files. 
@@ -75,7 +66,7 @@ Feel free to edit thoses files by adding some sample content and replacing the `
 
 Launch by using the following command:
 
-```
+```bash
 hugo serve
 ```
 
@@ -83,20 +74,26 @@ Go to `http://localhost:1313`
 
 You should notice three things:
 
-1. You have a left-side **Basics** menu, containing two submenus with names equal to the `title` properties in the previously created files.
+1. You have a left-side **Intro** menu, containing two submenus with names equal to the `title` properties in the previously created files.
 2. The home page explains how to customize it by following the instructions.
 3. When you run `hugo serve`, when the contents of the files change, the page automatically refreshes with the changes. Neat!
+
+Alternatively, you can run the following command in a terminal window to tell Hugo to automatically rebuild whenever a file is changed. This can be helpful when rapidly iterating over content changes.
+
+```bash
+hugo serve -D
+```
 
 ## Build the website
 
 When your site is ready to deploy, run the following command:
 
-```
+```bash
 hugo
 ```
 
 A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
 
 {{% notice note %}}
-This website can be automatically published and hosted with [Netlify](https://www.netlify.com/) (Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)). Alternatively, you can use [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+Do not deploy this content in your own Isengard account. Please contact the Event Outfitters team when you are ready to publish and we will assist with deployment to a custom url similar to https://my-aws-workshop.immersionday.com/
 {{% /notice %}}

@@ -1,57 +1,47 @@
----
-date: 2016-04-09T16:50:16+02:00
-title: Pages organization
-weight: 5
----
++++
+title = "Pages Organization"
+weight = 21
++++
 
-In **Hugo**, pages are the core of your site. Once it is configured, pages are definitely the added value to your documentation site.
+In **Hugo**, pages are the core of your site. All of your workshop steps should be developed as pages.
 
 ## Folders
 
-Organize your site like [any other Hugo project](https://gohugo.io/content/organization/). Typically, you will have a *content* folder with all your pages.
+Organize your workshop similar to the steps within a specfic workshop. For example, a workshop with 3 labs might look like this:
 
+```markdown
     content
-    ├── level-one
-    │   ├── level-two
-    │   │   ├── level-three
-    │   │   │   ├── level-four
-    │   │   │   │   ├── _index.md       <-- /level-one/level-two/level-three/level-four
-    │   │   │   │   ├── page-4-a.md     <-- /level-one/level-two/level-three/level-four/page-4-a
-    │   │   │   │   ├── page-4-b.md     <-- /level-one/level-two/level-three/level-four/page-4-b
-    │   │   │   │   └── page-4-c.md     <-- /level-one/level-two/level-three/level-four/page-4-c
-    │   │   │   ├── _index.md           <-- /level-one/level-two/level-three
-    │   │   │   ├── page-3-a.md         <-- /level-one/level-two/level-three/page-3-a
-    │   │   │   ├── page-3-b.md         <-- /level-one/level-two/level-three/page-3-b
-    │   │   │   └── page-3-c.md         <-- /level-one/level-two/level-three/page-3-c
-    │   │   ├── _index.md               <-- /level-one/level-two
-    │   │   ├── page-2-a.md             <-- /level-one/level-two/page-2-a
-    │   │   ├── page-2-b.md             <-- /level-one/level-two/page-2-b
-    │   │   └── page-2-c.md             <-- /level-one/level-two/page-2-c
-    │   ├── _index.md                   <-- /level-one
-    │   ├── page-1-a.md                 <-- /level-one/page-1-a
-    │   ├── page-1-b.md                 <-- /level-one/page-1-b
-    │   └── page-1-c.md                 <-- /level-one/page-1-c
-    ├── _index.md                       <-- /
-    └── page-top.md                     <-- /page-top
+    ├── lab-1
+    │   ├── step-1
+    │   │   ├── step-1a
+    │   │   │   ├── _index.en.md    <-- /en/lab-1/step-1/step-1a.html (in English)
+    │   │   │   └── _index.fr.md    <-- /fr/lab-1/step-1/step-1a.html (in French)
+    │   │   ├── _index.en.md        <-- /en/lab-1/step-1.html (in English)
+    │   │   └── _index.fr.md        <-- /fr/lab-1/step-1.html (in French)
+    │   ├── _index.en.md            <-- /en/lab-1.html (in English)
+    │   └── _index.fr.md            <-- /fr/lab-1.html (in French)
+    ├── _index.en.md                <-- /en/ (in English)
+    └── _index.fr.md                <-- /fr/ (in French)
+```
 
 {{% notice note %}}
-`_index.md` is required in each folder, it’s your “folder home page”
+`_index.en.md` is required in each folder, it’s your “folder home page”
 {{% /notice %}}
 
 ## Types
 
-**Hugo-theme-learn** defines two types of pages. *Default* and *Chapter*. Both can be used at any level of the documentation, the only difference being layout display.
+This template defines two types of pages. *Default* and *Chapter*. Both can be used at any level of the workshop, the only difference being layout display.
 
 A **Chapter** displays a page meant to be used as introduction for a set of child pages. Commonly, it contains a simple title and a catch line to define content that can be found under it.
 You can define any HTML as prefix for the menu. In the example below, it's just a number but that could be an [icon](https://fortawesome.github.io/Font-Awesome/).
 
-![Chapter page](/en/cont/pages/images/pages-chapter.png?width=50pc)
+{{< img "pages-chapter.en.png" "Chapter page" >}}
 
 ```markdown
 +++
 title = "Basics"
 chapter = true
-weight = 5
+weight = 10
 pre = "<b>1. </b>"
 +++
 
@@ -59,39 +49,57 @@ pre = "<b>1. </b>"
 
 # Basics
 
-Discover what this Hugo theme is all about and the core-concepts behind it.
+Discover what this template is all about and the core-concepts behind it.
 ```
 
-To tell **Hugo-theme-learn** to consider a page as a chapter, set `chapter=true` in the Front Matter of the page.
+To tell the template to consider a page as a chapter, set `chapter=true` in the Front Matter of the page.
 
 A **Default** page is any other content page.
 
-![Default page](/en/cont/pages/images/pages-default.png?width=50pc)
+{{< img "pages-default.en.png" "Default page" >}}
 
 ```toml
 +++
 title = "Installation"
-weight = 15
+weight = 12
 +++
 ```
 
-The following steps are here to help you initialize your new website. If you don't know Hugo at all, we strongly suggest you to train by following this [great documentation for beginners](https://gohugo.io/overview/quickstart/).
+## Images
 
-## Create your project
+There are multiple ways to store images you need to use as part of your workshop. These pages use the Page Bundle method, which keeps the images for specific pages in the same folder structure as the content.
 
-Hugo provides a `new` command to create a new website.
-
+```markdown
+    content
+    └── lab-1
+        └── step-1
+            └── step-1a
+                ├── _index.en.md        <-- /en/lab-1/step-1/step-1a.html
+                └── my_image.en.png    <-- /fr/lab-1/step-1/step-1a/my_image.en.png
 ```
-hugo new site <new_project>
+
+You can reference images in your pages when using the [Page Bundle](https://gohugo.io/content-management/page-bundles/) method by using the `img` shortcode. More information can be found here.
+
+You can also opt to store all of your images in the `static` folder, which will be accessible from {{% siteurl %}}
+
+```markdown
+    content
+    └── lab-1
+        └── step-1
+            └── step-1a
+                ├── _index.en.md    <-- /en/lab-1/step-1/step-1a.html
+    static
+    └── images
+        └── my_image.en.png         <-- /images/my_image.en.png
 ```
 
-**Hugo-theme-learn** provides [archetypes]({{< relref "cont/archetypes.en.md" >}}) to help you create this kind of pages.
+You can reference images stored in the `static` folder by using [markdown syntax for images](/en/cont/markdown.html#images).
 
 ## Front Matter configuration
 
 Each Hugo page has to define a [Front Matter](https://gohugo.io/content/front-matter/) in *yaml*, *toml* or *json*.
 
-**Hugo-theme-learn** uses the following parameters on top of Hugo ones :
+This template uses the following parameters on top of Hugo ones :
 
 ```toml
 +++
@@ -115,22 +123,9 @@ LastModifierEmail = ""
 +++
 ```
 
-### Add icon to a menu entry
-
-In the page frontmatter, add a `pre` param to insert any HTML code before the menu label. The example below uses the Github icon.
-
-```toml
-+++
-title = "Github repo"
-pre = "<i class='fab fa-github'></i> "
-+++
-```
-
-![Title with icon](/en/cont/pages/images/frontmatter-icon.png)
-
 ### Ordering sibling menu/page entries
 
-Hugo provides a [flexible way](https://gohugo.io/content/ordering/) to handle order for your pages.
+This template provides a [flexible way](https://gohugo.io/content/ordering/) to handle order for your pages.
 
 The simplest way is to set `weight` parameter to a number.
 
@@ -141,9 +136,18 @@ weight = 5
 +++
 ```
 
+We recommend that you set the weight for chapters as multiple of 10, with the pages inside each chapter counting down from there. For example:
+
+Chapter 1: `weight = 10`  
+Page 1: `weight = 11`  
+Page 2: `weight = 12`  
+
+Chapter 2: `weight = 20`  
+Page 1: `weight = 21`  
+
 ### Using a custom title for menu entries
 
-By default, **Hugo-theme-learn** will use a page's `title` attribute for the menu item (or `linkTitle` if defined).
+By default, the template will use a page's `title` attribute for the menu item (or `linkTitle` if defined).
 
 But a page's title has to be descriptive on its own while the menu is a hierarchy.
 We've added the `menuTitle` parameter for that purpose:
@@ -156,11 +160,3 @@ title = "Install on Linux"
 menuTitle = "Linux"
 +++
 ```
-
-## Homepage
-
-To configure your home page, you basically have three choices:
-
-1. Create an `_index.md` document in `content` folder and fill the file with *Markdown content*
-2. Create an `index.html` file in the `static` folder and fill the file with *HTML content*
-3. Configure your server to automatically redirect home page to one your documentation page

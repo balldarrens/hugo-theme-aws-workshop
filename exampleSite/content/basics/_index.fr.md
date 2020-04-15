@@ -1,12 +1,8 @@
----
-title: Démarrage
-weight: 5
-pre: "<b>1. </b>"
-chapter: true
----
++++
+title = "Les bases"
+chapter = true
+weight = 10
+pre = "<b>1. </b>"
++++
 
-### Chapitre 1
-
-# Démarrage
-
-Découvrez comment utiliser ce thème Hugo et apprenez-en les concepts
+Découvrez en quoi consiste ce modèle et quels sont ses concepts de base.

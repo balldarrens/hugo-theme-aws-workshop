@@ -1,10 +1,9 @@
----
-date: 2016-04-09T16:50:16+02:00
-title: Multilingual and i18n
-weight: 30
----
++++
+title = "Multilingual and i18n"
+weight = 25
++++
 
-**Learn theme** is fully compatible with Hugo multilingual mode.
+This template is fully compatible with Hugo multilingual mode.
 
 It provides:
 
@@ -12,7 +11,7 @@ It provides:
 - Automatic menu generation from multilingual content
 - In-browser language switching
 
-![I18n menu](/en/cont/i18n/images/i18n-menu.gif)
+<img src="/en/cont/i18n/i18n.en.png?classes=shadow" alt="I18n menu" />
 
 ## Basic configuration
 
@@ -59,9 +58,7 @@ Use [slug](https://gohugo.io/content-management/multilingual/#translate-your-con
 
 Translations strings are used for common default values used in the theme (*Edit this page* button, *Search placeholder* and so on). Translations are available in french and english but you may use another language or want to override default values.
 
-To override these values, create a new file in your local i18n folder `i18n/<idlanguage>.toml` and inspire yourself from the theme `themes/hugo-theme-learn/i18n/en.toml` 
-
-By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR](https://github.com/matcornic/hugo-theme-learn/pulls) to the theme ! 
+To override these values, create a new file in your local i18n folder `i18n/<idlanguage>.toml` and inspire yourself from the theme `themes/learn/i18n/en.toml` 
 
 ## Disable language switching
 
@@ -74,5 +71,3 @@ Just set `disableLanguageSwitchingButton=true` in your `config.toml`
   # When using mulitlingual website, disable the switch language button.
   disableLanguageSwitchingButton = true
 ```
-
-![I18n menu](/en/cont/i18n/images/i18n-menu.gif)
