@@ -58,8 +58,13 @@
 }
 .remark-slide-content .remark-slide-number,
 .remark-slide-content .footer li {
+  color: #ffffff;
+  font-size: x-small;
+}
+.remark-slide-content .footer_aws li {
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 0.5;
+  color: #ffffff;
 }
 .remark-slide-content.smokescreen > h1,
 .remark-slide-content img[src~=smokescreen] {
