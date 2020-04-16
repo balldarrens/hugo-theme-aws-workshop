@@ -3,10 +3,10 @@
 
 name = "aws-workshop"
 license = "MIT"
-licenselink = "https://github.com/balldarrens/hugo-theme-merged/blob/master/LICENSE.md"
+licenselink = "https://github.com/balldarrens/hugo-theme-aws-workshop/blob/master/LICENSE.md"
 description = "Merged theme for AWS workshops based on Hugo themes; learn and story"
-homepage = "https://github.com/balldarrens/hugo-theme-merged/"
-repo = "https://github.com/balldarrens/hugo-theme-merged"
+homepage = "https://github.com/balldarrens/hugo-theme-aws-workshop/"
+repo = "https://github.com/balldarrens/hugo-theme-aws-workshop"
 tags = ["documentation", "aws", "workshop", "doc", "search", "slides"]
 features = ["documentation", "menu", "nested sections", "search", "mermaid"]
 min_version = 0.25
