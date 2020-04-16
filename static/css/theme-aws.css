@@ -16,7 +16,7 @@
 
     --MENU-SECTIONS-ACTIVE-BG-color:#232F3E; /* Background color of the active section and its childs */
     --MENU-SECTIONS-BG-color:#161E2D; /* Background color of other sections */
-    --MENU-SECTIONS-TEXT-color: #FF9900; /*Color of pre text */
+    --MENU-SECTIONS-TEXT-color: #232F3E; /*Color of pre text  old: FF9900 */
     --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
     --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
     --MENU-SECTION-ACTIVE-CATEGORY-color: #232F3E; /* Color of active category text */
